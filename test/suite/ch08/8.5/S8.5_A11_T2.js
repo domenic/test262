@@ -11,27 +11,27 @@
 var p_zero=+0;
 var n_zero=-0;
 
-//CHECK #1
+// +0 (in a variable) == -0 (in a variable)
 if ((p_zero == n_zero) !== true){
   $ERROR('#1: var p_zero=+0; var n_zero=-0; p_zero != n_zero');
 }
 
-//CHECK #2
+// -0 (in a variable) == 0 (as a literal)
 if ((n_zero == 0) !== true){
   $ERROR('#2: var p_zero=+0; var n_zero=-0; n_zero == 0');
 }
 
-//CHECK #3
+// +0 (in a variable) == -0 (as a literal)
 if ((p_zero == -0) !== true){
   $ERROR('#3: var p_zero=+0; var n_zero=-0; p_zero == -0');
 }
 
-//CHECK #4
+// +0 (in a variable) === 0 (as a literal)
 if ((p_zero === 0) !== true){
   $ERROR('#4: var p_zero=+0; var n_zero=-0; p_zero === 0');
 }
 
-//CHECK #5
+// -0 (in a variable) === -0 (as a literal)
 if ((n_zero === -0) !== true){
   $ERROR('#5: var p_zero=+0; var n_zero=-0; n_zero === -0');
 }
